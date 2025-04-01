@@ -1,0 +1,179 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #1e1e2f;
+    color: #f4f4f9;
+}
+
+/* Parallax Background */
+.parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #007bff, #6a11cb);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+    animation: moveBackground 10s infinite alternate ease-in-out;
+}
+
+@keyframes moveBackground {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Converter Container */
+.converter-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .converter-container {
+    background: #2a2a3b;
+    color: #f4f4f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    transition: color 0.5s ease;
+}
+
+body.dark-mode h1 {
+    color: #f4f4f9;
+}
+
+/* Converter Form */
+.converter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+    transition: color 0.5s ease;
+}
+
+body.dark-mode label {
+    color: #ddd;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+input, select {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body.dark-mode input, body.dark-mode select {
+    background-color: #333;
+    color: #f4f4f9;
+    border-color: #555;
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+body.dark-mode button {
+    background-color: #6a11cb;
+}
+
+body.dark-mode button:hover {
+    background-color: #4a0d9e;
+}
+
+/* Result Section */
+.result {
+    margin-top: 20px;
+}
+
+#resultText {
+    font-size: 18px;
+    color: #333;
+    transition: color 0.5s ease;
+}
+
+body.dark-mode #resultText {
+    color: #f4f4f9;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+body.dark-mode .theme-toggle {
+    background: #6a11cb;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #4a0d9e;
+}
